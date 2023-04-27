@@ -58,7 +58,7 @@ const WRITEPERMS = []
             options,
             format
         }) => {
-            
+            console.log('poisdjfposdjofdkjfosfj;ds');
             return new Promise((resolve, reject) => {
                 AppleHealthKit.initHealthKit(HealthConfig, (err, results) => {
                     if (err) {
@@ -79,7 +79,7 @@ const WRITEPERMS = []
                                 resolve({ success: false, value: [] })
                             }
                             else {
-                                // console.log(`data ${methods} health-kit =>`, JSON.stringify(results, null, 2))
+                                console.log(`data ${methods} health-kit =>`, JSON.stringify(results, null, 2))
                                 resolve({ success: true, type: methods, data: format?.(results)||results})
                             }
                         });
